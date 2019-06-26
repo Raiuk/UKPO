@@ -26,6 +26,7 @@ public class HelloTests {
         form.setSize(900,600);
         form.setVisible(true);
 */
+/*
         char table[][] = new char[5][5];
         for (int i = 0; i < 5; i++) {
             for (int j = 0; j < 5; j++) {
@@ -35,7 +36,8 @@ public class HelloTests {
         for (int i = 0; i < 4; i++) {
             table[i + 1][i] = 'X';
         }
-        check(table);
+        //check(table);
+        */
     }
 
     static boolean check(char[][] table) {
@@ -94,5 +96,14 @@ public class HelloTests {
 
     }
 
+    static boolean check_input(char[][] table) {
+        for (int i = 0; i < 5; i++) {
+            for (int j = 0; j < 5; j++) {
+                if(table[i][j] == 'x' | table[i][j] == 'X' | table[i][j] == 'o' | table[i][j] == 'O' | table[i][j] == ' ') {}
+                else return false;
+            }
+        }
+        return true;
+    }
 
 }

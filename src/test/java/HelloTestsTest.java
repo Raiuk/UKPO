@@ -61,6 +61,32 @@ public class HelloTestsTest {
         boolean expected = false;
         assertEquals(expected, actual);
     }
+
+    @Test
+    public void check5() {
+        HelloTests helloTests = new HelloTests();
+        char[][] table = new char[][]{  {'X',' ','O',' ','O'},
+                                        {'X','O','X',' ',' '},
+                                        {'O','X','O','O',' '},
+                                        {'X',' ',' ','X',' '},
+                                        {'O','X','X','O','X'},};
+        boolean actual = helloTests.check_input(table);
+        boolean expected = true;
+        assertEquals(expected, actual);
+    }
+
+    @Test
+    public void check6() {
+        HelloTests helloTests = new HelloTests();
+        char[][] table = new char[][]{  {' ','a',' ',' ',' '},
+                                        {'g','a',' ',' ',' '},
+                                        {' ',' ','b',' ',' '},
+                                        {' ',' ',' ',' ',' '},
+                                        {' ',' ',' ',' ',' '}};
+        boolean actual = helloTests.check_input(table);
+        boolean expected = false;
+        assertEquals(expected, actual);
+    }
 /*
     @BeforeClass
     public static void setUpOnce() {
